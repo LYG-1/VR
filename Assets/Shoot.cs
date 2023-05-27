@@ -36,12 +36,10 @@ public class Shoot : MonoBehaviour
         if (rightController.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)
         {
             inkParticle.Play();
-            Debug.Log("Play");
         }
         else
         {
             inkParticle.Stop();
-            Debug.Log("Stop");
         }
     }
 }
