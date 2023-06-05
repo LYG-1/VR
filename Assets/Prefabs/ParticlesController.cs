@@ -5,8 +5,10 @@ using UnityEngine;
 public class ParticlesController: MonoBehaviour{
     public Color paintColor;
     
-    public float minRadius = 0.05f;
+    public float minRadius = 0.1f;
     public float maxRadius = 0.2f;
+    [SerializeField] static public float m = 1;
+    public float m1 = 1;
     public float strength = 1;
     public float hardness = 1;
     [Space]
@@ -24,12 +26,13 @@ public class ParticlesController: MonoBehaviour{
     void OnParticleCollision(GameObject other) {
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
 
+        m1 = m;
         Paintable p = other.GetComponent<Paintable>();
         if(p != null){
             for  (int i = 0; i< numCollisionEvents; i++){
                 Vector3 pos = collisionEvents[i].intersection;
                 float radius = Random.Range(minRadius, maxRadius);
-                PaintManager.instance.paint(p, pos, radius, hardness, strength, paintColor);
+                PaintManager.instance.paint(p, pos, radius * m, hardness, strength, paintColor);
             }
         }
     }
