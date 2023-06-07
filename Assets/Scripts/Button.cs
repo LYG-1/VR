@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
@@ -26,6 +27,21 @@ public class Button : MonoBehaviour
         Text2.SetActive(true);
         gameObject1.SetActive(true);
         gameObject2.SetActive(false);
+    }
+
+    public void Scence0()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Scence1()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void Scence2()
+    {
+        SceneManager.LoadScene(2);
     }
 
 }
