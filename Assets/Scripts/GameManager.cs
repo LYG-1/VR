@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     //把粒子对应赋予给这些变量
     public ParticleSystem MainVisualParticle;
     public ParticleSystem SplashParticle;
+    public ParticleSystem SubEmitter0;
     public ParticleSystem ShootEffectParticle;
     //MainVisualParticle实例上的脚本
     public ParticlesController Pcolor;
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
             MainVisualParticle.startColor = color[c];
             SplashParticle.startColor = color[c];
             ShootEffectParticle.startColor = color[c];
+            SubEmitter0.startColor = color[c];
             Pcolor.paintColor = color[c];
             t = tm;
         }
