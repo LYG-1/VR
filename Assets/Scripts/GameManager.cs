@@ -14,8 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] CharacterController characterController;
     [SerializeField] Transform head;
+    [SerializeField] AudioSource Audio;
     public float spawDistance = 2;
-    [SerializeField] static public bool flag = true;
+    [SerializeField] static public bool flag = false;
     public int tm = 30;
     public int t = 0;
 
